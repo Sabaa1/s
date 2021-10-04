@@ -55,7 +55,9 @@ namespace WindowsFormsApp6
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginButton
@@ -63,12 +65,13 @@ namespace WindowsFormsApp6
             this.LoginButton.BackColor = System.Drawing.Color.SkyBlue;
             this.LoginButton.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.Firebrick;
-            this.LoginButton.Location = new System.Drawing.Point(71, 284);
+            this.LoginButton.Location = new System.Drawing.Point(72, 246);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(131, 50);
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Log in";
             this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // LogUsernameLabel
             // 
@@ -76,7 +79,7 @@ namespace WindowsFormsApp6
             this.LogUsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.LogUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogUsernameLabel.ForeColor = System.Drawing.Color.Firebrick;
-            this.LogUsernameLabel.Location = new System.Drawing.Point(11, 155);
+            this.LogUsernameLabel.Location = new System.Drawing.Point(12, 116);
             this.LogUsernameLabel.Name = "LogUsernameLabel";
             this.LogUsernameLabel.Size = new System.Drawing.Size(80, 16);
             this.LogUsernameLabel.TabIndex = 1;
@@ -88,7 +91,7 @@ namespace WindowsFormsApp6
             this.LogPassLabel.BackColor = System.Drawing.Color.Transparent;
             this.LogPassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogPassLabel.ForeColor = System.Drawing.Color.Firebrick;
-            this.LogPassLabel.Location = new System.Drawing.Point(11, 192);
+            this.LogPassLabel.Location = new System.Drawing.Point(11, 153);
             this.LogPassLabel.Name = "LogPassLabel";
             this.LogPassLabel.Size = new System.Drawing.Size(80, 16);
             this.LogPassLabel.TabIndex = 2;
@@ -100,7 +103,7 @@ namespace WindowsFormsApp6
             this.LogResponseLabel.BackColor = System.Drawing.Color.Transparent;
             this.LogResponseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogResponseLabel.ForeColor = System.Drawing.Color.Firebrick;
-            this.LogResponseLabel.Location = new System.Drawing.Point(11, 229);
+            this.LogResponseLabel.Location = new System.Drawing.Point(11, 192);
             this.LogResponseLabel.Name = "LogResponseLabel";
             this.LogResponseLabel.Size = new System.Drawing.Size(80, 16);
             this.LogResponseLabel.TabIndex = 3;
@@ -180,14 +183,14 @@ namespace WindowsFormsApp6
             // 
             // LogUsernameBox
             // 
-            this.LogUsernameBox.Location = new System.Drawing.Point(102, 155);
+            this.LogUsernameBox.Location = new System.Drawing.Point(114, 116);
             this.LogUsernameBox.Name = "LogUsernameBox";
             this.LogUsernameBox.Size = new System.Drawing.Size(125, 20);
             this.LogUsernameBox.TabIndex = 10;
             // 
             // LogPassBox
             // 
-            this.LogPassBox.Location = new System.Drawing.Point(102, 192);
+            this.LogPassBox.Location = new System.Drawing.Point(114, 154);
             this.LogPassBox.Name = "LogPassBox";
             this.LogPassBox.Size = new System.Drawing.Size(125, 20);
             this.LogPassBox.TabIndex = 11;
@@ -238,6 +241,7 @@ namespace WindowsFormsApp6
             this.RegButton.TabIndex = 17;
             this.RegButton.Text = "Register";
             this.RegButton.UseVisualStyleBackColor = false;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // RegCourseLabel
             // 
@@ -303,7 +307,7 @@ namespace WindowsFormsApp6
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(8, 61);
+            this.label1.Location = new System.Drawing.Point(82, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 35);
             this.label1.TabIndex = 23;
@@ -315,17 +319,27 @@ namespace WindowsFormsApp6
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(277, 43);
+            this.label2.Location = new System.Drawing.Point(435, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 35);
             this.label2.TabIndex = 24;
             this.label2.Text = "Register";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(645, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(98, 100);
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegCourseBox);
@@ -355,6 +369,7 @@ namespace WindowsFormsApp6
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,6 +402,7 @@ namespace WindowsFormsApp6
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
